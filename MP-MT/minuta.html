@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Plan Estratégico - Consórcio OBSERVA-IA MPMT</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --primary: #0f172a;
+            --secondary: #0284c7;
+            --accent: #38bdf8;
+            --bg-light: #f8fafc;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --card-bg: #ffffff;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        header {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: #ffffff;
+            padding: 48px;
+            border-radius: 16px;
+            margin-bottom: 32px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        header .tag {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 13px;
+            letter-spacing: 2px;
+            color: var(--accent);
+            text-transform: uppercase;
+            margin-bottom: 12px;
+            display: inline-block;
+        }
+        header h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 38px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
+        header p {
+            font-size: 16px;
+            color: #94a3b8;
+            max-width: 800px;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+            margin-bottom: 32px;
+        }
+        .stat-card {
+            background: var(--card-bg);
+            padding: 24px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .stat-card .label {
+            font-size: 14px;
+            color: var(--text-muted);
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+        .stat-card .value {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        .stat-card .sub {
+            font-size: 12px;
+            color: var(--secondary);
+            margin-top: 4px;
+            font-weight: 600;
+        }
+        section {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 36px;
+            margin-bottom: 32px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--border);
+        }
+        h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        h2 i {
+            color: var(--secondary);
+            font-size: 22px;
+        }
+        p {
+            margin-bottom: 16px;
+            color: #475569;
+        }
+        .table-container {
+            overflow-x: auto;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            font-size: 15px;
+        }
+        th, td {
+            padding: 14px 18px;
+            border-bottom: 1px solid var(--border);
+        }
+        th {
+            background-color: #f1f5f9;
+            font-weight: 600;
+            color: var(--primary);
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        tr:last-child td {
+            border-bottom: none;
+        }
+        tr:hover {
+            background-color: #f8fafc;
+        }
+        .highlight-row {
+            background-color: #e0f2fe !important;
+            font-weight: 700;
+            color: #0369a1;
+        }
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+        @media(max-width: 768px) {
+            .grid-2 { grid-template-columns: 1fr; }
+            header { padding: 24px; }
+            header h1 { font-size: 28px; }
+        }
+        ul {
+            padding-left: 20px;
+            color: #475569;
+            margin-bottom: 16px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .badge {
+            display: inline-block;
+            padding: 4px 10px;
+            background: #e0f2fe;
+            color: #0369a1;
+            font-size: 12px;
+            font-weight: 600;
+            border-radius: 6px;
+            margin-right: 6px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    
+    <!-- HEADER -->
+    <header>
+        <span class="tag">REM Mato Grosso Fase II • TdR nº 025/2026</span>
+        <h1>Business Plan: Consórcio OBSERVA-IA MPMT</h1>
+        <p>Modelo financeiro, dimensionamento de equipe multidisciplinar, carga tributária detalhada e planejamento estratégico para a contratação da plataforma no âmbito do Ministério Público de Mato Grosso.</p>
+    </header>
+
+    <!-- STATS OVERVIEW -->
+    <div class="stats-grid">
+        <div class="stat-card">
+            <span class="label">Custo Direto (Equipe + Cloud)</span>
+            <span class="value">R$ 1.145.600,00</span>
+            <span class="sub">365 dias de execução</span>
+        </div>
+        <div class="stat-card">
+            <span class="label">Total de Tributos (16,33%)</span>
+            <span class="value">R$ 308.552,10</span>
+            <span class="sub">Lucro Presumido (Serviços)</span>
+        </div>
+        <div class="stat-card">
+            <span class="label">Margem & Contingência (35%)</span>
+            <span class="value">R$ 435.328,00</span>
+            <span class="sub">Mitigação de Riscos + Lucro</span>
+        </div>
+        <div class="stat-card" style="border-left: 4px solid var(--secondary);">
+            <span class="label">Preço Global Mínimo Sugerido</span>
+            <span class="value" style="color: #0284c7;">R$ 1.889.480,10</span>
+            <span class="sub">Proposta Comercial Definitiva</span>
+        </div>
+    </div>
+
+    <!-- SECTION 1: CONSORTIUM SYNERGY -->
+    <section>
+        <h2><i class="fa-solid fa-people-group"></i> 1. Estratégia de Consórcio Empresarial</h2>
+        <p>Para atender com excelência a alta complexidade técnica e a capilaridade exigidas pelo MPMT, a constituição do consórcio agrupa sinergias complementares indispensáveis:</p>
+        <div class="grid-2">
+            <div>
+                <h3><i class="fa-solid fa-laptop-code" style="color:var(--secondary);"></i> Empresa Líder (Software & Integração)</h3>
+                <ul>
+                    <li>Gestão global do contrato e governança de entregas.</li>
+                    <li>Desenvolvimento Backend/Frontend e arquitetura corporativa.</li>
+                    <li>Integração nativa com o SIMP (Sistema do Ministério Público).</li>
+                </ul>
+            </div>
+            <div>
+                <h3><i class="fa-solid fa-brain" style="color:var(--secondary);"></i> Empresas Especializadas (IA & Geo)</h3>
+                <ul>
+                    <li><b>Especialista em Geoprocessamento:</b> Tratamento de rasters, vetores, CAR e sobreposições espaciais.</li>
+                    <li><b>Especialista em PLN e IA:</b> Modelos de linguagem para leitura de autos e sumarização jurídica.</li>
+                    <li><b>Especialista em Segurança & LGPD:</b> Controle de acesso rigoroso por comarcas e criptografia.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: TEAM COSTS -->
+    <section>
+        <h2><i class="fa-solid fa-users-gear"></i> 2. Custos de Pessoal e Insumos (365 Dias)</h2>
+        <p>Dimensionamento baseado no esforço técnico para cobrir concepção, desenvolvimento de módulos de IA, cruzamento geoespacial e homologação:</p>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Função / Perfil Técnico</th>
+                        <th>Dedicação (FTE)</th>
+                        <th>Prazo (Meses)</th>
+                        <th>Custo Mensal (R$)</th>
+                        <th>Custo Total (R$)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Gerente de Projeto & Arquiteto de Solução</td>
+                        <td>1,0</td>
+                        <td>12</td>
+                        <td>R$ 27.000,00</td>
+                        <td>R$ 162.000,00</td>
+                    </tr>
+                    <tr>
+                        <td>Desenvolvedores Core (Backend & Frontend)</td>
+                        <td>3,0</td>
+                        <td>12</td>
+                        <td>R$ 29.000,00</td>
+                        <td>R$ 348.000,00</td>
+                    </tr>
+                    <tr>
+                        <td>Analista de Negócios / Requisitos</td>
+                        <td>0,5</td>
+                        <td>12</td>
+                        <td>R$ 9.000,00</td>
+                        <td>R$ 54.000,00</td>
+                    </tr>
+                    <tr>
+                        <td>Cientista de Dados, IA & PLN</td>
+                        <td>1,5</td>
+                        <td>10</td>
+                        <td>R$ 26.000,00</td>
+                        <td>R$ 188.000,00</td>
+                    </tr>
+                    <tr>
+                        <td>Especialista em Geoprocessamento</td>
+                        <td>1,0</td>
+                        <td>10</td>
+                        <td>R$ 11.000,00</td>
+                        <td>R$ 110.000,00</td>
+                    </tr>
+                    <tr>
+                        <td>Segurança da Informação, DevOps & QA</td>
+                        <td>2,0</td>
+                        <td>10</td>
+                        <td>R$ 27.000,00</td>
+                        <td>R$ 270.000,00</td>
+                    </tr>
+                    <tr>
+                        <td>Consultoria Jurídica, Ambiental & UX/UI</td>
+                        <td>0,8</td>
+                        <td>6</td>
+                        <td>R$ 8.100,00</td>
+                        <td>R$ 63.600,00</td>
+                    </tr>
+                    <tr style="font-weight: 600; background-color: #f8fafc;">
+                        <td colspan="4">Subtotal de Equipe Multidisciplinar</td>
+                        <td>R$ 1.195.600,00</td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">Infraestrutura, Nuvem, Bancos Vetoriais e APIs</td>
+                        <td>R$ 50.000,00</td>
+                    </tr>
+                    <tr class="highlight-row">
+                        <td colspan="4">CUSTO DIRETO TOTAL DO PROJETO</td>
+                        <td>R$ 1.145.600,00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- SECTION 3: TAX SPREADSHEET -->
+    <section>
+        <h2><i class="fa-solid fa-file-invoice-dollar"></i> 3. Planilha Detalhada de Impostos (Lucro Presumido)</h2>
+        <p>Carga tributária incidente sobre a prestação de serviços de tecnologia corporativa e desenvolvimento de software sob o regime de Lucro Presumido (Alíquota efetiva consolidada de 16,33%):</p>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tributo Federal / Municipal</th>
+                        <th>Base de Cálculo Legal</th>
+                        <th>Alíquota Nominal</th>
+                        <th>Alíquota Efetiva s/ Faturamento</th>
+                        <th>Valor Estimado (R$)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><b>PIS</b></td>
+                        <td>Faturamento Bruto</td>
+                        <td>0,65%</td>
+                        <td>0,65%</td>
+                        <td>R$ 12.281,60</td>
+                    </tr>
+                    <tr>
+                        <td><b>COFINS</b></td>
+                        <td>Faturamento Bruto</td>
+                        <td>3,00%</td>
+                        <td>3,00%</td>
+                        <td>R$ 56.684,40</td>
+                    </tr>
+                    <tr>
+                        <td><b>ISS</b> (Municipal - Cuiabá/MT)</td>
+                        <td>Faturamento Bruto</td>
+                        <td>5,00%</td>
+                        <td>5,00%</td>
+                        <td>R$ 94.474,00</td>
+                    </tr>
+                    <tr>
+                        <td><b>IRPJ</b> (Imposto de Renda PJ)</td>
+                        <td>Presunção de 32% sobre Faturamento</td>
+                        <td>15,00%</td>
+                        <td>4,80%</td>
+                        <td>R$ 90.695,00</td>
+                    </tr>
+                    <tr>
+                        <td><b>CSLL</b> (Contribuição Social s/ Lucro)</td>
+                        <td>Presunção de 32% sobre Faturamento</td>
+                        <td>9,00%</td>
+                        <td>2,88%</td>
+                        <td>R$ 54.417,00</td>
+                    </tr>
+                    <tr class="highlight-row">
+                        <td colspan="4">CARGA TRIBUTÁRIA TOTAL ESTIMADA</td>
+                        <td>R$ 308.552,10</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- SECTION 4: PRICING FORMATION -->
+    <section>
+        <h2><i class="fa-solid fa-calculator"></i> 4. Composição do Preço Global (Markup)</h2>
+        <p>Estrutura de formação de preço de venda adotada para cobrir os riscos de integração com múltiplos órgãos e garantir a sustentabilidade financeira do consórcio:</p>
+        <div style="background:#f8fafc; padding:24px; border-radius:12px; border:1px solid var(--border);">
+            <div style="display:flex; justify-content:space-between; margin-bottom:12px; font-size:16px;">
+                <span>Custos Diretos (Equipe + Cloud/APIs):</span>
+                <b>R$ 1.145.600,00</b>
+            </div>
+            <div style="display:flex; justify-content:space-between; margin-bottom:12px; font-size:16px;">
+                <span>(+) Contingência Técnica e de Riscos (15%):</span>
+                <b>R$ 171.840,00</b>
+            </div>
+            <div style="display:flex; justify-content:space-between; margin-bottom:16px; font-size:16px;">
+                <span>(+) Margem de Lucro Operacional do Consórcio (20%):</span>
+                <b>R$ 263.488,00</b>
+            </div>
+            <hr style="border:0; border-top:1px solid var(--border); margin-bottom:16px;">
+            <div style="display:flex; justify-content:space-between; margin-bottom:12px; font-size:16px; color: var(--primary);">
+                <span><b>Subtotal Líquido Tributável:</b></span>
+                <b>R$ 1.580.928,00</b>
+            </div>
+            <div style="display:flex; justify-content:space-between; margin-bottom:16px; font-size:16px;">
+                <span>(÷) Fator Divisor Tributário (1 - 0,1633):</span>
+                <b>0,8367</b>
+            </div>
+            <hr style="border:0; border-top:2px solid var(--secondary); margin-bottom:16px;">
+            <div style="display:flex; justify-content:space-between; font-size:22px; color: var(--secondary);">
+                <span><b>VALOR GLOBAL MÍNIMO DE VENDA:</b></span>
+                <b>R$ 1.889.480,10</b>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer style="text-align: center; color: var(--text-muted); font-size: 14px; margin-top: 40px; padding: 20px;">
+        <p>OBSERVA-IA MPMT • Documento analítico gerado para fins de planejamento estratégico de consórcio e licitação.</p>
+    </footer>
+
+</div>
+
+</body>
+</html>
