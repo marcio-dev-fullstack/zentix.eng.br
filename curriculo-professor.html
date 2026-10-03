@@ -27,13 +27,11 @@
             color: var(--light);
             line-height: 1.6;
             overflow-x: hidden;
-            text-align: center; /* Centralização global */
         }
 
-        /* Textos gerais, blocos e listas centralizados para mobile */
-        p, span, div, li, .summary-box, .timeline-desc, .timeline-desc li, .edu-card, .edu-card div, .edu-card p, .edu-card span {
-            text-align: center !important;
-            justify-content: center !important;
+        /* Justificação para textos gerais e resumos */
+        p, .summary-box, .timeline-desc {
+            text-align: justify;
         }
 
         .bg-animation {
@@ -80,23 +78,15 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
         }
 
         .hero {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 30px;
-            padding: 40px 0;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 40px;
+            padding: 60px 0;
             border-bottom: 1px solid rgba(0, 212, 255, 0.2);
             position: relative;
-            width: 100%;
-            text-align: center;
         }
 
         .hero::before {
@@ -117,11 +107,6 @@
 
         .profile-section {
             text-align: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
         }
 
         .profile-img-container {
@@ -145,7 +130,6 @@
             box-shadow: 0 0 30px rgba(0, 212, 255, 0.3);
             position: relative;
             z-index: 2;
-            margin: 0 auto;
         }
 
         .profile-ring {
@@ -167,7 +151,6 @@
         .status-badge {
             display: inline-flex;
             align-items: center;
-            justify-content: center;
             gap: 8px;
             background: rgba(0, 212, 255, 0.1);
             border: 1px solid var(--primary);
@@ -175,7 +158,6 @@
             border-radius: 20px;
             font-size: 0.85rem;
             margin-top: 15px;
-            text-align: center;
         }
 
         .status-dot {
@@ -191,61 +173,40 @@
             50% { opacity: 0.5; transform: scale(1.2); }
         }
 
-        .hero-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            text-align: center;
-        }
-
         .hero-content h1 {
-            font-size: 2.4rem;
+            font-size: 2.8rem;
             font-weight: 700;
             background: linear-gradient(135deg, var(--light) 0%, var(--primary) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
             margin-bottom: 10px;
-            text-align: center;
-            width: 100%;
         }
 
         .hero-content .title {
-            font-size: 1.1rem;
+            font-size: 1.3rem;
             color: var(--primary);
             margin-bottom: 20px;
             font-weight: 300;
             letter-spacing: 1px;
-            text-align: center;
-            width: 100%;
         }
 
         .hero-stats {
             display: flex;
-            gap: 12px;
+            gap: 20px;
             margin: 25px 0;
             flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
         }
 
         .stat-item {
             text-align: center;
-            padding: 10px 15px;
+            padding: 12px 20px;
             background: rgba(255, 255, 255, 0.03);
             border: 1px solid rgba(0, 212, 255, 0.2);
             border-radius: 10px;
             transition: all 0.3s ease;
             flex: 1;
-            min-width: 95px;
-            max-width: 140px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
+            min-width: 110px;
         }
 
         .stat-item:hover {
@@ -255,53 +216,43 @@
         }
 
         .stat-number {
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             font-weight: bold;
             color: var(--primary);
             display: block;
-            text-align: center;
         }
 
         .stat-label {
-            font-size: 0.7rem;
+            font-size: 0.75rem;
             color: #888;
             text-transform: uppercase;
             letter-spacing: 1px;
-            text-align: center;
         }
 
         .contact-grid {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 12px;
             margin-top: 20px;
-            width: 100%;
-            max-width: 450px;
-            align-items: center;
-            justify-content: center;
         }
 
         .contact-item {
             display: flex;
             align-items: center;
-            justify-content: center;
-            gap: 10px;
+            gap: 12px;
             padding: 10px 14px;
             background: rgba(255, 255, 255, 0.03);
             border-radius: 8px;
             border-left: 3px solid var(--primary);
-            border-right: 3px solid var(--primary);
             transition: all 0.3s ease;
             text-decoration: none;
             color: var(--light);
             font-size: 0.9rem;
-            width: 100%;
-            text-align: center;
         }
 
         .contact-item:hover {
             background: rgba(0, 212, 255, 0.1);
-            transform: scale(1.02);
+            transform: translateX(5px);
         }
 
         .contact-item span.icon {
@@ -313,23 +264,13 @@
         .section {
             padding: 40px 0;
             border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
         }
 
         .section-header {
             display: flex;
-            flex-direction: column;
             align-items: center;
-            justify-content: center;
-            gap: 12px;
+            gap: 15px;
             margin-bottom: 25px;
-            width: 100%;
-            text-align: center;
         }
 
         .section-icon {
@@ -343,23 +284,19 @@
             font-size: 1.2rem;
             font-weight: bold;
             box-shadow: 0 5px 20px rgba(0, 212, 255, 0.3);
-            margin: 0 auto;
         }
 
         .section h2 {
-            font-size: 1.4rem;
+            font-size: 1.6rem;
             color: var(--light);
             position: relative;
-            text-align: center;
-            width: 100%;
         }
 
         .section h2::after {
             content: '';
             position: absolute;
             bottom: -6px;
-            left: 50%;
-            transform: translateX(-50%);
+            left: 0;
             width: 50px;
             height: 3px;
             background: linear-gradient(90deg, var(--primary), transparent);
@@ -369,27 +306,16 @@
             background: rgba(255, 255, 255, 0.02);
             border: 1px solid rgba(0, 212, 255, 0.1);
             border-radius: 12px;
-            padding: 20px;
+            padding: 22px;
             line-height: 1.8;
-            font-size: 0.95rem;
-            text-align: center !important;
-            max-width: 800px;
-            width: 100%;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
+            font-size: 0.98rem;
+            text-align: justify;
         }
 
         .skills-container {
-            display: flex;
-            flex-direction: column;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 20px;
-            width: 100%;
-            max-width: 800px;
-            align-items: center;
-            justify-content: center;
         }
 
         .skill-category {
@@ -398,12 +324,6 @@
             border-radius: 15px;
             padding: 20px;
             transition: all 0.3s ease;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
         }
 
         .skill-category:hover {
@@ -417,31 +337,24 @@
             margin-bottom: 15px;
             display: flex;
             align-items: center;
-            justify-content: center;
             gap: 10px;
-            font-size: 1rem;
-            text-align: center;
-            width: 100%;
+            font-size: 1.05rem;
         }
 
         .skill-tags {
             display: flex;
             flex-wrap: wrap;
             gap: 8px;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
         }
 
         .skill-tag {
             background: rgba(0, 212, 255, 0.08);
             border: 1px solid rgba(0, 212, 255, 0.25);
-            padding: 6px 12px;
+            padding: 6px 14px;
             border-radius: 20px;
-            font-size: 0.8rem;
+            font-size: 0.82rem;
             transition: all 0.3s ease;
             cursor: default;
-            text-align: center;
         }
 
         .skill-tag:hover {
@@ -463,54 +376,62 @@
 
         .timeline {
             position: relative;
-            padding-left: 0;
-            width: 100%;
-            max-width: 800px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
+            padding-left: 25px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(180deg, var(--primary), var(--secondary));
         }
 
         .timeline-item {
             position: relative;
-            padding: 20px;
-            width: 100%;
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid rgba(0, 212, 255, 0.1);
-            border-radius: 12px;
-            margin-bottom: 15px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
+            padding-bottom: 30px;
+            padding-left: 25px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -31px;
+            top: 5px;
+            width: 12px;
+            height: 12px;
+            background: var(--dark);
+            border: 3px solid var(--primary);
+            border-radius: 50%;
+            box-shadow: 0 0 0 4px rgba(0, 212, 255, 0.2);
+        }
+
+        .timeline-item.current::before {
+            background: var(--success);
+            border-color: var(--success);
+            animation: pulse 2s infinite;
         }
 
         .timeline-header {
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 6px;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 10px;
             margin-bottom: 8px;
-            width: 100%;
-            text-align: center;
         }
 
         .timeline-title {
-            font-size: 1.1rem;
+            font-size: 1.15rem;
             color: var(--light);
             font-weight: 600;
-            text-align: center;
-            width: 100%;
         }
 
         .timeline-company {
             color: var(--primary);
             font-weight: 500;
-            text-align: center;
-            width: 100%;
         }
 
         .timeline-date {
@@ -520,9 +441,6 @@
             font-size: 0.8rem;
             color: var(--primary);
             border: 1px solid rgba(0, 212, 255, 0.3);
-            display: inline-block;
-            margin-top: 4px;
-            text-align: center;
         }
 
         .timeline-location {
@@ -531,52 +449,41 @@
             margin-bottom: 8px;
             display: flex;
             align-items: center;
-            justify-content: center;
             gap: 5px;
-            width: 100%;
-            text-align: center;
         }
 
         .timeline-desc {
             color: #aaa;
             line-height: 1.7;
-            font-size: 0.9rem;
-            text-align: center !important;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
+            font-size: 0.92rem;
+            text-align: justify;
         }
 
         .timeline-desc ul {
             list-style: none;
             padding-left: 0;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
         }
 
         .timeline-desc li {
-            padding-left: 0;
+            padding-left: 18px;
             position: relative;
             margin-bottom: 6px;
-            text-align: center !important;
-            width: 100%;
+        }
+
+        .timeline-desc li::before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
         }
 
         .edu-grid {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            width: 100%;
-            max-width: 800px;
-            align-items: center;
-            justify-content: center;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            gap: 18px;
         }
 
+        /* CARDS ACADÊMICOS COM CONTEÚDO CENTRALIZADO */
         .edu-card {
             background: rgba(255, 255, 255, 0.02);
             border: 1px solid rgba(0, 212, 255, 0.1);
@@ -590,7 +497,10 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            width: 100%;
+        }
+
+        .edu-card div, .edu-card p, .edu-card span {
+            text-align: center !important;
         }
 
         .edu-card::before {
@@ -614,33 +524,25 @@
             letter-spacing: 1.5px;
             color: var(--primary);
             margin-bottom: 8px;
-            text-align: center;
-            width: 100%;
         }
 
         .edu-title {
-            font-size: 1rem;
+            font-size: 1.05rem;
             color: var(--light);
             margin-bottom: 6px;
             font-weight: 600;
-            text-align: center;
-            width: 100%;
         }
 
         .edu-institution {
             color: #888;
-            font-size: 0.85rem;
+            font-size: 0.88rem;
             margin-bottom: 4px;
-            text-align: center;
-            width: 100%;
         }
 
         .edu-year {
             color: var(--success);
-            font-size: 0.8rem;
+            font-size: 0.82rem;
             font-weight: 500;
-            text-align: center;
-            width: 100%;
         }
 
         .edu-status {
@@ -652,9 +554,9 @@
             font-size: 0.72rem;
             margin-top: 8px;
             border: 1px solid var(--success);
-            text-align: center;
         }
 
+        /* RODAPÉ TOTALMENTE CENTRALIZADO */
         .footer {
             text-align: center !important;
             display: flex;
@@ -673,17 +575,46 @@
             margin: 0 auto;
         }
 
-        /* Responsividade para telas maiores (Desktop) */
-        @media (min-width: 768px) {
-            .skills-container, .edu-grid {
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-                width: 100%;
+        @media (max-width: 768px) {
+            .hero {
+                grid-template-columns: 1fr;
+                text-align: center;
             }
+
+            .hero-content h1 {
+                font-size: 2.1rem;
+            }
+
+            .hero-stats {
+                justify-content: center;
+            }
+
             .contact-grid {
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
-                max-width: 550px;
+                grid-template-columns: 1fr;
+            }
+
+            .timeline-header {
+                flex-direction: column;
+            }
+        }
+
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+
+            .bg-animation, .particles, .profile-ring {
+                display: none;
+            }
+
+            .hero {
+                border-bottom: 2px solid #333;
+            }
+
+            .skill-tag, .timeline-date, .edu-card {
+                border: 1px solid #ccc;
+                background: white;
             }
         }
     </style>
@@ -733,19 +664,19 @@
                     </div>
                 </div>
 
-                <div class="contact-grid">                   
-                    <a href="tel:+5562996466033" class="contact-item">
-                        <span class="icon">☎</span>
-                        <span>(62) 99646-6033</span>
-                    </a>
-                    <div class="contact-item">
-                        <span class="icon">📍</span>
-                        <span>Cuiabá - MT, Brasil</span>
-                    </div>
-                     <a href="mailto:cda.marcio@gmail.com" class="contact-item">
+                <div class="contact-grid">
+                    <a href="mailto:cda.marcio@gmail.com" class="contact-item">
                         <span class="icon">✉</span>
                         <span>cda.marcio@gmail.com</span>
                     </a>
+                    <a href="tel:+5565992312739" class="contact-item">
+                        <span class="icon">☎</span>
+                        <span>(65) 99231-2739</span>
+                    </a>
+                    <div class="contact-item">
+                        <span class="icon">📍</span>
+                        <span>Cuiabá-MT | Goiânia-GO | Palmas-TO | Conceição do Araguaia - PA | Brasil</span>
+                    </div>
                     <div class="contact-item">
                         <span class="icon">🎓</span>
                         <span>Lattes ID: 5752724756523880</span>
@@ -758,14 +689,17 @@
         <section class="section">
             <div class="section-header">
                 <div class="section-icon">📖</div>
-                <h2>Resumo Acadêmico</h2>
+                <h2>Resumo Profissional</h2>
             </div>
             <div class="summary-box">
-              Doutorando em Ciências da Educação | Christian Business School <br>(CBS, França — Instituição reconhecida pelo Ministério da Educação Nacional francês (UAI: 0756680D). <br><br>
-              Foco de Pesquisa: Aplicação de Inteligência Artificial e Tecnologias Emergentes na gestão estratégica, análise de dados e inovação de processos. <br><br>
-              Atuação Educacional: Educação Superior e Educação Profissional. <br><br>
-            Áreas de Aplicação Multidisciplinar: Educação; Gestão de Projetos; Engenharias Civil; Ambiental e Sanitária; Computação; Automação e Controle; e Saúde e Segurança do Trabalho. <br><br>
-            Linha Investigativa: Impacto de Ambientes Virtuais Inteligentes na aprendizagem e na otimização de processos complexos.
+                Doutorando em Ciências da Educação e Mestre em Administração pela 
+                <strong>Christian Business School (CBS, França)</strong>, instituição reconhecida pelo 
+                Ministério da Educação Nacional francês (UAI: 0756680D). Sua trajetória acadêmica e de 
+                pesquisa é centralizada na aplicação de <strong>Inteligência Artificial e Tecnologias 
+                Emergentes</strong> na gestão estratégica, análise de dados e processos educacionais. 
+                Desenvolve tese focada em Inovação Pedagógica e IA na Educação Profissional e Tecnológica (EPT), 
+                investigando o impacto de Tutores Virtuais inteligentes e sistemas de avaliação formativa personalizada. 
+                Possui vasta atuação no Ensino Superior, EPT e gestão de projetos tecnológicos.
             </div>
         </section>
 
@@ -777,7 +711,7 @@
             </div>
             <div class="skills-container">
                 <div class="skill-category">
-                    <h3>🤖 Educação & Pesquisa</h3>
+                    <h3>🤖 IA na Educação & Pesquisa</h3>
                     <div class="skill-tags">
                         <span class="skill-tag expert">Tutores Virtuais Inteligentes</span>
                         <span class="skill-tag expert">IA Generativa no Ensino</span>
@@ -814,7 +748,7 @@
                 </div>
 
                 <div class="skill-category">
-                    <h3>🗄 Dados, Infraestrutura & Segurança</h3>
+                    <h3>🗄️️ Dados, Infraestrutura & Segurança</h3>
                     <div class="skill-tags">
                         <span class="skill-tag">Banco de Dados & SQL</span>
                         <span class="skill-tag">Perícia Forense Computacional</span>
@@ -851,16 +785,20 @@
         <section class="section">
             <div class="section-header">
                 <div class="section-icon">💼</div>
-                <h2>Trajetória Profissional</h2>
+                <h2>Trajetória Profissional & Docente</h2>
             </div>         
             <div class="timeline">
-                <div class="timeline-item">
+                <div class="timeline-item current">
                     <div class="timeline-header">
-                        <div class="timeline-title">Analista Sênior de Projetos de TI</div>
-                        <div class="timeline-company">Governo do Estado de Mato Grosso</div>
-                        <div class="timeline-date">Atual</div>
+                        <div>
+                            <div class="timeline-title">Analista Sênior de Projetos de TI</div>
+                            <div class="timeline-company">Governo do Estado de Mato Grosso</div>
+                        </div>
+                        <div class="timeline-date">2026 - Atual</div>
                     </div>
-                    <div class="timeline-location">🏢 Cuiabá - MT</div>       
+                    <div class="timeline-location">
+                        🏢 Cuiabá - MT
+                    </div>       
                     <div class="timeline-desc">
                         <ul>
                             <li>Atuação estratégica na gestão de projetos computacionais, inovação tecnológica e suporte a sistemas públicos de segurança e governança.</li>
@@ -868,13 +806,17 @@
                     </div>            
                 </div>
 
-                <div class="timeline-item">
+                <div class="timeline-item current">
                     <div class="timeline-header">
-                        <div class="timeline-title">Professor</div>
-                        <div class="timeline-company">ZENTIX Cursos</div>
-                        <div class="timeline-date">Atual</div>
+                        <div>
+                            <div class="timeline-title">Professor</div>
+                            <div class="timeline-company">ZENTIX Cursos</div>
+                        </div>
+                        <div class="timeline-date">2025 - Atual</div>
                     </div>
-                    <div class="timeline-location">🏠 Ensino a Distância & Gestão Educacional</div>       
+                    <div class="timeline-location">
+                        🏠 Ensino a Distância & Gestão Educacional
+                    </div>       
                     <div class="timeline-desc">
                         <ul>
                             <li>Coordenação, estruturação e elaboração de conteúdos didáticos para formação tecnológica, EaD e programas educacionais.</li>
@@ -882,13 +824,17 @@
                     </div>            
                 </div>
 
-                <div class="timeline-item">
+                <div class="timeline-item current">
                     <div class="timeline-header">
-                        <div class="timeline-title">Engenheiro Civil</div>
-                        <div class="timeline-company">ZENTIX Projetos e Engenharia</div>
-                        <div class="timeline-date">Atual</div>
+                        <div>
+                            <div class="timeline-title">Engenheiro Civil</div>
+                            <div class="timeline-company">ZENTIX Projetos e Engenharia</div>
+                        </div>
+                        <div class="timeline-date">2024 - Atual</div>
                     </div>
-                    <div class="timeline-location">🏗️ Engenharia & Consultoria Técnica</div>       
+                    <div class="timeline-location">
+                        🏗️ Engenharia & Consultoria Técnica
+                    </div>       
                     <div class="timeline-desc">
                         <ul>
                             <li>Elaboração de laudos, fiscalização, gerenciamento de obras e projetos de engenharia e saneamento.</li>
@@ -898,11 +844,15 @@
 
                 <div class="timeline-item">
                     <div class="timeline-header">
-                        <div class="timeline-title">Professor de Ensino Superior</div>
-                        <div class="timeline-company">Universidade do Estado do Pará - UEPA</div>
-                        <div class="timeline-date"></div>
+                        <div>
+                            <div class="timeline-title">Professor de Ensino Superior (Substituto)</div>
+                            <div class="timeline-company">Universidade do Estado do Pará - UEPA</div>
+                        </div>
+                        <div class="timeline-date">2018</div>
                     </div>
-                    <div class="timeline-location">🏛️ Ensino Superior Presencial</div>       
+                    <div class="timeline-location">
+                        🏛️ Ensino Superior Presencial
+                    </div>       
                     <div class="timeline-desc">
                         <ul>
                             <li>Ministrou as disciplinas de <strong>Introdução à Computação</strong>, <strong>Informática Aplicada à Educação Matemática</strong>, <strong>Computação</strong> e <strong>Métodos Computacionais</strong>.</li>
@@ -913,11 +863,15 @@
 
                 <div class="timeline-item">
                     <div class="timeline-header">
-                        <div class="timeline-title">Professor do Ensino Superior</div>
-                        <div class="timeline-company">IFPA | PARFOR (Plano Nacional de Formação de Professores)</div>
-                        <div class="timeline-date"></div>
+                        <div>
+                            <div class="timeline-title">Professor do Ensino Superior</div>
+                            <div class="timeline-company">IFPA | PARFOR (Plano Nacional de Formação de Professores)</div>
+                        </div>
+                        <div class="timeline-date">2011 - 2012</div>
                     </div>
-                    <div class="timeline-location">🏛️ Graduação / Licenciatura em Informática</div>       
+                    <div class="timeline-location">
+                        🏛️ Graduação / Licenciatura em Informática
+                    </div>       
                     <div class="timeline-desc">
                         <ul>
                             <li>Docente na Licenciatura Plena em Informática.</li>
@@ -928,11 +882,15 @@
 
                 <div class="timeline-item">
                     <div class="timeline-header">
-                        <div class="timeline-title">Professor Formador / EPT</div>
-                        <div class="timeline-company">IFPA | PRONATEC</div>
-                        <div class="timeline-date"></div>
+                        <div>
+                            <div class="timeline-title">Professor Formador / EPT</div>
+                            <div class="timeline-company">IFPA | PRONATEC</div>
+                        </div>
+                        <div class="timeline-date">2012 - 2014</div>
                     </div>
-                    <div class="timeline-location">🏫 Educação Profissional e Tecnológica</div>       
+                    <div class="timeline-location">
+                        🏫 Educação Profissional e Tecnológica
+                    </div>       
                     <div class="timeline-desc">
                         <ul>
                             <li>Docência nos cursos de Operador de Computador, Montagem e Manutenção de Computadores, e Instalador e Reparador de Redes.</li>
@@ -943,11 +901,15 @@
                 
                 <div class="timeline-item">
                     <div class="timeline-header">
-                        <div class="timeline-title">Instrutor de Cursos Livres e Técnicos</div>
-                        <div class="timeline-company">Microlins / Top Cursos Profissionalizantes</div>
-                        <div class="timeline-date"></div>                        
+                        <div>
+                            <div class="timeline-title">Instrutor de Cursos Livres e Técnicos</div>
+                            <div class="timeline-company">Microlins / Top Cursos Profissionalizantes</div>
+                        </div>
+                        <div class="timeline-date">2008 - 2012</div>                        
                     </div>
-                    <div class="timeline-location">👨‍🏫 Formação Profissional Técnica</div>       
+                    <div class="timeline-location">
+                        👨‍🏫 Formação Profissional Técnica
+                    </div>       
                     <div class="timeline-desc">
                         <ul>
                             <li>Instrução em Pacote Office, Redes Cabeadas, Sistemas Operacionais Windows e Manutenção de Hardware.</li>
@@ -955,6 +917,7 @@
                     </div>             
                 </div>
             </div>
+
         </section>
 
         <!-- Stricto Sensu -->
@@ -976,11 +939,13 @@
                 </div>
        
                 <div class="edu-card">
+                    
                     <div class="edu-title">Mestre em Administração de Empresas</div>
                     <div class="edu-institution">Christian Business School (CBS, França)</div>                    
                     <div style="font-size: 0.85rem; color: #aaa; margin-top: 6px; text-align: center;">
                         <strong>Dissertação:</strong> "Adoção e Impactos da Inteligência Artificial na Gestão de Projetos: Uma Análise Comparativa entre os Setores de Tecnologia da Informação e Engenharia Civil"
                     </div>
+                  
                 </div>
             </div>
         </section>
@@ -994,44 +959,43 @@
             <div class="edu-grid">
                 <div class="edu-card">
                     <div class="edu-type">Bacharelado</div>
-                    <div class="edu-title">Engenharia Civil</div>     
+                    <div class="edu-title">Engenharia Civil - 2023</div>                         
                 </div>
                 <div class="edu-card">
                     <div class="edu-type">Licenciatura</div>
-                    <div class="edu-title">Licenciatura em Matemática</div>     
+                    <div class="edu-title">Licenciatura em Matemática - 2022</div>     
                 </div>
                 <div class="edu-card">
                     <div class="edu-type">Bacharelado</div>
-                    <div class="edu-title">Sistemas de Informação</div>     
+                    <div class="edu-title">Sistemas de Informação - 2005</div>     
                 </div>
             </div>
         </section>
 
-        <!-- Post-Graduations -->
+        <!-- Post-Graduations (Centralizadas) -->
         <section class="section">
             <div class="section-header">
                 <div class="section-icon">📜</div>
                 <h2>Pós-Graduações (Lato Sensu)</h2>
             </div>
             <div class="edu-grid">
-                <div class="edu-card">
-                    <div class="edu-type">Especialização</div>
-                    <div class="edu-title">Inovação Urbana e Cidades Inteligentes</div>
-                    <div class="edu-institution">IFSetãoPE</div>
-                    <span class="edu-status">Em Andamento</span>
-                </div>
+                <!-- 2027 -->
                 <div class="edu-card">
                     <div class="edu-type">Especialização</div>
                     <div class="edu-title">EaD na Educação Profissional e Tecnológica</div>
                     <div class="edu-institution">IFMT</div>
+                    <div class="edu-year">2027</div>
                     <span class="edu-status">Em Andamento</span>
                 </div>
                 <div class="edu-card">
                     <div class="edu-type">Especialização</div>
                     <div class="edu-title">Engenharia DevOps</div>
                     <div class="edu-institution">IFMT</div>
+                    <div class="edu-year">2027</div>
                     <span class="edu-status">Em Andamento</span>
                 </div>
+
+                <!-- 2026 -->
                 <div class="edu-card">
                     <div class="edu-type">Especialização</div>
                     <div class="edu-title">Engenharia de Tráfego</div>
@@ -1057,6 +1021,8 @@
                     <div class="edu-title">Logística e Modais de Transporte</div>
                     <div class="edu-institution">Faculdade Prisma</div>
                 </div>
+
+                <!-- 2025 -->
                 <div class="edu-card">
                     <div class="edu-type">Especialização</div>
                     <div class="edu-title">Desenvolvimento e Gerenciamento de Projetos</div>
@@ -1066,12 +1032,15 @@
                     <div class="edu-type">Especialização</div>
                     <div class="edu-title">Perícia Forense Aplicada à Informática</div>
                     <div class="edu-institution">Faculdade Facuminas</div>
+                    <div class="edu-year">2025</div>
                 </div>
                 <div class="edu-card">
                     <div class="edu-type">Especialização</div>
                     <div class="edu-title">Sistemas Construtivos</div>
                     <div class="edu-institution">Faculdade Facuminas</div>
                 </div>
+
+                <!-- 2023 -->
                 <div class="edu-card">
                     <div class="edu-type">Especialização</div>
                     <div class="edu-title">BIM em Gerenciamento de Projetos e Qualidade</div>
@@ -1080,18 +1049,21 @@
                 <div class="edu-card">
                     <div class="edu-type">Especialização</div>
                     <div class="edu-title">Engenharia de Segurança do Trabalho</div>
-                    <div class="edu-institution">Faculdade Facuminas</div>
+                    <div class="edu-institution">Facuminas</div>
                 </div>
                 <div class="edu-card">
                     <div class="edu-type">Especialização</div>
                     <div class="edu-title">Engenharia de Software e Gestão de Projetos</div>
                     <div class="edu-institution">Faculdade Estratego</div>
+                    <div class="edu-year">2023</div>
                 </div>
                 <div class="edu-card">
                     <div class="edu-type">Especialização</div>
                     <div class="edu-title">Redes de Computadores e Cloud Computing</div>
                     <div class="edu-institution">Faculdade Estratego</div>
                 </div>
+
+                <!-- 2022 -->
                 <div class="edu-card">
                     <div class="edu-type">Especialização</div>
                     <div class="edu-title">Algoritmos e Estrutura de Dados</div>
@@ -1102,11 +1074,15 @@
                     <div class="edu-title">Docência em Matemática e Práticas Pedagógicas</div>
                     <div class="edu-institution">Faculdade Serra Geral</div>
                 </div>
+
+                <!-- 2020 -->
                 <div class="edu-card">
                     <div class="edu-type">Especialização</div>
                     <div class="edu-title">Banco de Dados</div>
                     <div class="edu-institution">Faculdade UniBF</div>
                 </div>
+
+                <!-- 2015 -->
                 <div class="edu-card">
                     <div class="edu-type">Especialização</div>
                     <div class="edu-title">Engenharia de Sistemas</div>
@@ -1115,16 +1091,17 @@
             </div>
         </section>      
         
-        <!-- Formação Complementar -->
+        <!-- Formação Complementar Completa -->
         <section class="section">
             <div class="section-header">
                 <div class="section-icon">🎖️</div>
                 <h2>Formação Complementar</h2>
             </div>
-            <div class="skills-container">
-                <div class="skill-category">
-                    <h3>🏆 Cursos Extensivos, Capacitações & Eventos</h3>
-                    <div class="skill-tags">
+            <!-- Adicionado alinhamento centralizado nas tags e no bloco -->
+            <div style="display: flex; justify-content: center; width: 100%;">
+                <div class="skill-category" style="width: 100%; text-align: center;">
+                    <h3 style="justify-content: center;">🏆 Cursos Extensivos, Capacitações & Eventos</h3>
+                    <div class="skill-tags" style="justify-content: center;">
                         <span class="skill-tag expert">Treinamento Operacional do Portal SESP (SEJUSP-MT)</span>
                         <span class="skill-tag">Ciclo: Drones na Engenharia para Planejamento Urbano, Rural e Ambiental (CREA-SP)</span>
                         <span class="skill-tag">Jornada de Engenharia de Dados (BIX Tecnologia)</span>
@@ -1245,14 +1222,16 @@
 
         <!-- Footer -->
         <footer class="footer">
-            <p>Perfil Acadêmico, Docente e Profissional</p>
-            <p style="margin-top: 8px; font-size: 0.8rem;">© 2026 Márcio Rodrigues de Oliveira. Todos os direitos reservados.</p>
+            <center>
+                <p>Perfil Acadêmico, Docente e Profissional</p>
+                <p style="margin-top: 8px; font-size: 0.8rem;">© 2026 Márcio Rodrigues de Oliveira. Todos os direitos reservados.</p>
+            </center>
         </footer>
     </div>
 
     <script>
         const particlesContainer = document.getElementById('particles');
-        for (let i = 0; i < 30; i++) {
+        for (let i = 0; i < 50; i++) {
             const particle = document.createElement('div');
             particle.className = 'particle';
             particle.style.left = Math.random() * 100 + '%';
@@ -1260,6 +1239,27 @@
             particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
             particlesContainer.appendChild(particle);
         }
+
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.section, .skill-category, .edu-card, .timeline-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
 
         const title = document.querySelector('.title');
         const text = title.textContent;
